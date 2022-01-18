@@ -1,0 +1,1 @@
+<h2>Je suis la page category</h2>

@@ -1,0 +1,1 @@
+<h2>Je suis une page article</h2>
