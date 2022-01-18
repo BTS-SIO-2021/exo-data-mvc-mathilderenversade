@@ -4,7 +4,7 @@
 
 foreach($dataArticlesList as $key => $articleItem) :?>
 <article>
-    <h2><?=$articleItem['title'];?></h2>
+    <h2><a href='index.php?page=article&id=<?=$key;?>'><?=$articleItem['title'];?></a></h2>
     <?= $articleItem['content'] ;?>
 </article>
 <?php endforeach;?>
