@@ -9,11 +9,13 @@ $id = $_GET['id'];
 //var_dump($dataArticlesList[$id]);
 
 //echo $dataArticlesList[$id]['title'];
+//var_dump($articleToDisplay);
 
 ?>
 
-<h2><?= $dataArticlesList[$id]['title'];?></h2>
-<?= $dataArticlesList[$id]['content'];?>
-<p><?=$dataArticlesList[$id]['author'];?></p>
-<p><?=$dataArticlesList[$id]['date'];?></p>
-<p><?=$dataArticlesList[$id]['category'];?></p>
+
+<h2><?= $articleToDisplay->getTitle();?></h2>
+<?= $articleToDisplay->getContent();?>
+<p><?= $articleToDisplay->getAuthor()?></p>
+<p><?=$articleToDisplay->getDate()?></p>
+<p><?=$articleToDisplay->getCategory();?></p>

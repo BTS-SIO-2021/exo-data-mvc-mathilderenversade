@@ -2,9 +2,9 @@
 <?php 
 //var_dump($dataArticlesList);
 
-foreach($dataArticlesList as $key => $articleItem) :?>
+foreach($articleLists as $key => $articleItem) :?>
 <article>
-    <h2><a href='index.php?page=article&id=<?=$key;?>'><?=$articleItem['title'];?></a></h2>
-    <?= $articleItem['content'] ;?>
-</article>
+    <h2><a href='index.php?page=article&id=<?=$key;?>'><?=$articleItem->getTitle();?></a></h2>
+    <?= $articleItem->getContent();?>
+</article> 
 <?php endforeach;?>

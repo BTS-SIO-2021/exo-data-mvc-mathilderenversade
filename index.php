@@ -3,8 +3,12 @@
 require 'inc/classes/Article.php';
 require 'inc/classes/Data.php';
 
-$test = new Data();
-var_dump($test);
+$data = new Data();
+//var_dump($data);
+
+$articleLists = $data->getArticlesList();
+
+//var_dump($articleLists);
 
 //var_dump($_GET);
 
@@ -17,7 +21,22 @@ if(isset($_GET['page'])){
     $currentPage = $_GET['page'];
 }
 
-//require __DIR__.'/inc/data/datas.php';
+if($currentPage == "article"){
+    if (isset($_GET['id'])){
+        $articleId = $_GET['id'];
+        $articleToDisplay = $data->selectionArticle($articleId);
+
+        if($articleToDisplay == false){
+            exit('Article non trouvé');
+        } else {
+            // si par exemple on n'a pas fourni d'id 
+            //header('Location :index.php');
+            echo 'coucou';
+        }
+
+    }
+}
+
 
 require __DIR__.'/inc/templates/header.tpl.php';
 require __DIR__.'/inc/templates/'.$currentPage.'.tpl.php';
