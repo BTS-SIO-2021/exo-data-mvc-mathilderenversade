@@ -1,6 +1,12 @@
 <?php
 
-var_dump($_GET);
+require 'inc/classes/Article.php';
+require 'inc/classes/Data.php';
+
+$test = new Data();
+var_dump($test);
+
+//var_dump($_GET);
 
 // Par défaut, je suis sur la page d'accueil, la template de la page d'accueil est home(.tpl.php)
 $currentPage = "home";
@@ -11,7 +17,7 @@ if(isset($_GET['page'])){
     $currentPage = $_GET['page'];
 }
 
-require __DIR__.'/inc/data/datas.php';
+//require __DIR__.'/inc/data/datas.php';
 
 require __DIR__.'/inc/templates/header.tpl.php';
 require __DIR__.'/inc/templates/'.$currentPage.'.tpl.php';
