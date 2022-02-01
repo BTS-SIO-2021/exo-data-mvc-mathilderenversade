@@ -1,3 +1,21 @@
+# TO DO 01 février 
+
+L'objectif est de transformer cet exercice et au lieu d'utiliser des tableaux, utiliser des objets.
+
+## Etapes
+- créer un nouvelle branche nommée enmodeobjet
+- travailler depuis cette branche
+- créer un dossier classes dans le dossier inc
+- créer une classe Article avec les attributs et méthodes dont vous avez besoin
+- dans datas.php : transformer le tableau de tableaux $dataArticlesList en un tableau d'objets Article
+- créer une classe Data. Cette classe aura 3 propriétés :    $articlesList,
+$authorsList, $categoriesList.
+Cette classe permet d'instancier des objets dont les méthodes vont permettre : d'obtenir un tableau contenant des objets / un tableau des catégories / un tableau des auteurs.
+- modifier vos templates pour utiliser vos objets.
+
+
+# OLD
+
 ## Code fourni
 
 - l'intégration HTML/CSS bien moche est faite
