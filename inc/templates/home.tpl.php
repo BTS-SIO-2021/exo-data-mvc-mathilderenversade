@@ -4,7 +4,7 @@
 
 foreach($articleLists as $key => $articleItem) :?>
 <article>
-    <h2><a href='index.php?page=article&id=<?=$key;?>'><?=$articleItem->getTitle();?></a></h2>
-    <?= $articleItem->getContent();?>
+    <h2><a href='index.php?page=article&id'><?=$articleItem['title'];?></a></h2>
+    <p><?= $articleItem['content'];?></p>
 </article> 
 <?php endforeach;?>

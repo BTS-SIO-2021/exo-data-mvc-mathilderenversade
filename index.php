@@ -1,14 +1,14 @@
 <?php
 
 require 'inc/classes/Article.php';
-require 'inc/classes/Data.php';
+require 'inc/classes/DBData.php';
 
-$data = new Data();
+$data = new DBData();
 //var_dump($data);
 
-$articleLists = $data->getArticlesList();
+$articleLists = $data->getArticles();
 
-//var_dump($articleLists);
+var_dump($articleLists);
 
 //var_dump($_GET);
 
@@ -25,6 +25,7 @@ if($currentPage == "article"){
     if (isset($_GET['id'])){
         $articleId = $_GET['id'];
         $articleToDisplay = $data->selectionArticle($articleId);
+        var_dump($articleToDisplay);
 
         if($articleToDisplay == false){
             exit('Article non trouvé');
